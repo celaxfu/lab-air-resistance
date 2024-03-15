@@ -19,5 +19,6 @@ public class Airplane : MonoBehaviour
         rb.angularDrag = rb.velocity.magnitude * angularDrag;
 
         rb.AddTorque(Input.GetAxis("Horizontal") * transform.forward *-1);
+        rb.AddTorque(Input.GetAxis("Vertical") * transform.right);
     }
 }
